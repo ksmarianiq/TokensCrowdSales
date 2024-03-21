@@ -13,8 +13,9 @@
 ## Quickstart
 
 ```
-git clone https://github.com
-cd foundry-erc20-f23
+git clone https://github.com/ksmarianiq/TokensCrowdSales.git
+
+cd TokensCrowdSales
 forge install 
 forge build
 ```
