@@ -1,0 +1,30 @@
+Detailed Explanation of the Code
+MyToken Contract:
+
+This contract inherits from OpenZeppelin's ERC20 contract and implements a basic ERC-20 token with a name, symbol, 
+and fixed initial supply.
+
+TokenCrowdsale Contract:
+
+This contract manages the crowdsale of MyToken tokens.
+
+The constructor initializes the crowdsale parameters, such as the exchange rate, 
+the maximum number of tokens to sell, the start and end dates, the cliff period, and the vesting period.
+The buyTokens function allows participants to buy tokens by sending Ether.
+It checks that the crowdsale is open, that there are enough tokens available, and that the amount of Ether sent is sufficient.
+It transfers 20% of the purchased tokens immediately and vests the rest in the vesting schedule.
+The unlockTokens function allows participants to claim their vested tokens after the cliff period.
+The calculateVestedTokens function calculates the number of vested tokens based 
+on the time elapsed since the end of the crowdsale and the vesting period.
+The closeCrowdsale function allows the contract owner to close the crowdsale.
+The withdrawETH function allows the contract owner to withdraw the Ether received during the crowdsale.
+Overall:
+
+This contract implements all the required functionalities, including a basic ERC-20 
+token, a crowdsale with a vesting schedule, a cliff period, and gradual token release over time.
+The contract owner can close the crowdsale and withdraw the Ether received.
+
+Additional Notes:
+
+
+The contract has been tested using the Foundry framework.
